@@ -1,0 +1,8 @@
+DirectoryIndex index.html
+
+RewriteEngine On
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(html?|php)\ HTTP/
+RewriteRule ^index\.(html?|php)$ http://www.fewo-traumzeit.de/ [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^fewo-traumzeit.de [NC]
+RewriteRule ^(.*)$ http://www.fewo-traumzeit.de/$1 [L,R=301]
