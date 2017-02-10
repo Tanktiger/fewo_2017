@@ -52,6 +52,8 @@ mail($myemail, $subject, $message);
 <?php
 function check_input($data, $problem='')
 {
+    if (!$data) return "Keine Angabe";
+    
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
